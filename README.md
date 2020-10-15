@@ -1,45 +1,22 @@
-# asciidoctor-docker-template
+# Kubernetes is awesome!
 
 ## Overview
 
-This is a template-project for
+This is a template-project for my presentation in December. It contains my realjs presentation and also a simple example with quarkus.
 
-* generating AsciiDoc-Files to html-files and
-* deploying the html-files to gh-pages,
-* where the gh-pages are located in an branch of the repo called `gh-pages`.
+## Requirements
 
-AsciiDoctor - the software for converting the .adoc-files to .html-files - is executed in a Docker container.
-So you have nothing to install on your local machine, except Docker
+To try out my quarkus-kubernetes example you need an available kubernetes cluster. Also you need docker to create an image of the quarkus application. If you want to add some code you need to install maven. I used also the openjdk11.
 
-## Option 1: Run script outside Docker - in your host OS
+## Option 1: Kubernetes scripts for the presentation
 
-Two scripts are available:
+Because it would take a year to write all commands by my self i created a little cheatsheet for myself. It contains in particlar all the workflow to set up a kubernetes cluster from scratch.
 
-* `build-html-docker.sh` -> builds the .html-pages in the folder gh-pages
-* `publish-gh-pages.sh` -> builds and deploys the gh-pages
+## Option 2: Start the quarkus example
 
-additionally is a script `build-pdf-docker.sh` for creating a pdf document.
+For my example i builed a simple rest api with quarkus. It contains some basic endpoints that will return you some fake data (Topic is at the moment unsure).
+
+## Deploy the application to your kubernetes cluster
 
 
-## Option 2: [preferred] Run script inside Docker-container
-
-* First create a `.env`-file with
-```
-GIT_GLOBAL_MAIL=<your email>
-GIT_GLOBAL_USER_NAME=<your git - username>
-```
-* Then run the script `run-inside-docker.sh`.
-* The url of the created gh-page will be displayed. 
-
-## How to use Asciidoctor
-
-Download the latest [release](https://github.com/htl-leonding-college/asciidoctor-docker-template/releases) in your project and run the shell-scripts.
-
-## Demo Documents
-
-You can find demo documents in the `asciidocs.demo`-folder:
-
-- System Specification (Pflichtenheft)
-- Minutes of Meeting
-- some additional demos
 
