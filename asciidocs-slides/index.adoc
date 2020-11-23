@@ -1,16 +1,41 @@
-= Demo-Presentation für die hochwohllöbliche 4ahif
-Thomas W. Stütz
+= Kubernetes
+Christian Bachl
 1.0, 2020-10-20
 ifndef::sourcedir[:sourcedir: ../src/main/java]
 ifndef::imagesdir[:imagesdir: images]
 ifndef::backend[:backend: html5]
 :icons: font
+:revealjs_width: 1980
+:revealjs_height: 920
+:revealjs_center: false
 
-== First Slide
+== Overview
+* What is Kubernetes?
 
-* aaa
-* bbb
-* ccc [red]#red text#
+* Main K8s Components
+
+* K8s Architecture
+
+* Main Kubectl Commands – K8s CLI
+
+* K8s YAML Configuration File
+
+* Hands-On Demo (With Quarkus)
+
+[.columns]
+=== S
+
+[.column]
+--
+image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[width=1980, height=700]
+--
+
+[.column]
+--
+* Test
+* Test
+* Test
+--
 
 === Second Slide
 
@@ -26,8 +51,7 @@ type: String
 
 == Third Slide
 
-image:https://images.pexels.com/photos/3966425/pexels-photo-3966425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940[VW]
-
+image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[canvas,size=contain]
 == Fourth Slide
 
 IMPORTANT: Something very important
