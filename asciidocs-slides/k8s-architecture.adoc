@@ -1,0 +1,35 @@
+[[k8s-architecture]]
+== K8s Architecture
+
+=== Worker machine in K8s cluster
+
+=== How to you interact with a K8s cluster?
+
+* schedule pod
+* monitor
+* re-schudule/re-start pod
+* join a new node
+
+[.columns]
+=== Master node in K8s cluster
+
+[.column]
+--
+image::Kubernetes-Master-Processes.svg[width=1980, height=700]
+--
+
+[.column]
+--
+
+[%step]
+* cluster gateway
+* authentication
+* the api server is the only entrypont
+* Schudeler decides where a new pod should be scheduled
+* detects cluster state changes
+* etcd is the *cluster brain*
+* Cluster changes get stored in the etcd
+--
+
+=== Example cluster set-up
+

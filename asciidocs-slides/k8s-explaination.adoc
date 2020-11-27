@@ -1,0 +1,28 @@
+[[k8s-explaination]]
+== What is Kubernetes?
+
+=== Offcial definition of Kubernetes?
+
+* Open source *container orchestration tool* +
+* Developed by Google +
+* Help you manage containerized applications
+
+=== What problems does Kubernetes solve?
+
+=== Going back in time
+
+image:container_evolution.svg[width=1980, height=700]
+
+=== The need for a container orchestration tool
+
+* Trend from Monolith to Microservices
+* Increased usage of containers
+* Need of an tool to manage those hundreds of containers
+
+=== What features do orchestation tools offer?
+
+* High Availability
+* Scalability
+* Disaster recovery
+
+

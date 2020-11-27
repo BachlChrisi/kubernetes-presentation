@@ -2,7 +2,7 @@ set -e
 BUILD_DIR="gh-pages"
 REVEAL_DIR="asciidocs-slides"
 [ ! -d "./asciidocs-slides/revealjs" ] && source ./download-reveal.sh
-rm -rf -v $BUILD_DIR # else plantuml diagrams won't be rebuilt
+sudo rm -rf -v $BUILD_DIR # else plantuml diagrams won't be rebuilt
 cp -r -p -v $REVEAL_DIR $BUILD_DIR
 [ -d "./src" ] && cp -r -p -v src $BUILD_DIR
 
@@ -12,7 +12,7 @@ docker run --rm \
            asciidoctor/docker-asciidoctor:1.2.0 asciidoctor-revealjs \
            -r asciidoctor-diagram \
            -a icons=font \
-           -a revealjs_theme=white \
+           -a revealjs_theme=kubernetes \
            -a source-highlighter=rouge \
            -a imagesdir=images \
            -a revealjsdir=revealjs \

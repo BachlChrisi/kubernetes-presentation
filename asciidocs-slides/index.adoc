@@ -7,51 +7,56 @@ ifndef::backend[:backend: html5]
 :icons: font
 :revealjs_width: 1980
 :revealjs_height: 920
-:revealjs_center: false
 
-== Overview
-* What is Kubernetes?
+// Overview
 
-* Main K8s Components
+include::overview.adoc[leveloffset+=1]
 
-* K8s Architecture
+// What is k8s
 
-* Main Kubectl Commands – K8s CLI
+include::k8s-explaination.adoc[leveloffset+=1]
 
-* K8s YAML Configuration File
+// Main K8s components
 
-* Hands-On Demo (With Quarkus)
+include::k8s-components.adoc[leveloffset+=1]
 
-[.columns]
-=== S
+// K8s Architecture
 
-[.column]
---
-image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[width=1980, height=700]
---
+include::k8s-architecture.adoc[leveloffset+=1]
 
-[.column]
---
-* Test
-* Test
-* Test
---
+// Demo
 
-=== Second Slide
+include::k8s-demo.adoc[leveloffset+=1]
+// [.columns]
+// === S
 
-[plantuml,cld,png]
-----
-@startuml
-class Person {
-brand: String
-type: String
-}
-@enduml
-----
+// [.column]
+// --
+// image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[width=1980, height=700]
+// --
 
-== Third Slide
+// [.column]
+// --
+// Test +
+// Test +
+// Test +
+// --
 
-image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[canvas,size=contain]
-== Fourth Slide
+// === Second Slide
 
-IMPORTANT: Something very important
+// [plantuml,cld,png]
+// ----
+// @startuml
+// class Person {
+// brand: String
+// type: String
+// }
+// @enduml
+// ----
+
+// == Third Slide
+
+// image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[canvas,size=contain]
+// == Fourth Slide
+
+// IMPORTANT: Something very important

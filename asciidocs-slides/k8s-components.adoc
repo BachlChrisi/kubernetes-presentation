@@ -1,0 +1,58 @@
+[[k8s-components]]
+== Kubernetes Components
+
+[.columns]
+=== Node and Pod
+
+[.column]
+--
+image::Kubernetes-Pod.svg[width=1980, height=700]
+--
+
+[.column]
+--
+.*Pod*
+* smallest unit in K8s
+* abstraction over container
+* usually 1 application per Pod
+* each pod gets its own IP address
+* IMPORTANT: new IP address on re-creation
+--
+
+[.columns]
+=== Service
+
+[.column]
+--
+image::Kubernetes-Service-Basic.svg[width=1980, height=700]
+--
+
+[.column]
+--
+* permanent IP address
+* lifecycle of Pod and Service are not connected
+--
+
+[.columns]
+=== External service and Ingress
+
+[.column]
+--
+image::Kubernetes-External-Ingress.svg[width=1980, height=700]
+--
+
+[.column]
+--
+* permanent IP address
+* lifecycle of Pod and Service are not connected
+--
+
+=== ConfigMap
+
+=== Volumes
+
+=== Deployment and Sateful Set
+
+=== Sum up most important components in K8s
+
+
