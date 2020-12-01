@@ -1,7 +1,29 @@
 [[k8s-architecture]]
 == K8s Architecture
 
+[.columns]
 === Worker machine in K8s cluster
+
+[.column]
+--
+image::Kubernetes-Node-Processes.svg[width=1980, height=700]
+--
+
+[.column]
+--
+[%step]
+* General
+** Each Node has multiple Pods on it
+** 3 processes must be installed on every Node
+** Worker Nodes do the actual work
+* Kubelet
+** Kubelet interacts with both - the container and node
+** Kubelet starts the pod wit a container inside
+* Container runtime
+** Like docker, podman, etc
+* Kubeproxy
+** Intelligent request forwarding
+--
 
 === How to you interact with a K8s cluster?
 
@@ -22,14 +44,19 @@ image::Kubernetes-Master-Processes.svg[width=1980, height=700]
 --
 
 [%step]
-* cluster gateway
-* authentication
-* the api server is the only entrypont
-* Schudeler decides where a new pod should be scheduled
-* detects cluster state changes
-* etcd is the *cluster brain*
-* Cluster changes get stored in the etcd
+* Api Server
+** cluster gateway
+** authentication
+** the api server is the only entrypont
+* Scheduler
+** Scheduler decides where a new pod should be scheduled
+* Controller Manager
+** Detects cluster state changes/#/k8s-architecture
+* Key value Store
+** Etcd is the *cluster brain*
+** Cluster changes get stored in the etcd
 --
 
 === Example cluster set-up
 
+image::Kubernetes-Cluster-Architecture.svg[width=1980, height=700]

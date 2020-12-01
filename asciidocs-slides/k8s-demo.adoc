@@ -6,9 +6,9 @@
 * Docker is pre-installed
 * Master and Worker processes run on same machine
 * for testing purposes
-+
+
 IMPORTANT: dont use it in production
-+
+
 
 === What is kubectl
 

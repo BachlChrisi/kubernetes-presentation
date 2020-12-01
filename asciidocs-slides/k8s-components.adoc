@@ -11,12 +11,13 @@ image::Kubernetes-Pod.svg[width=1980, height=700]
 
 [.column]
 --
-.*Pod*
-* smallest unit in K8s
-* abstraction over container
-* usually 1 application per Pod
-* each pod gets its own IP address
-* IMPORTANT: new IP address on re-creation
+* *Pod*
+** Smallest unit in K8s
+** Abstraction over container
+** Usually 1 application per Pod
+** Each pod gets its own IP address
+
+IMPORTANT: new IP address on re-creation
 --
 
 [.columns]
@@ -29,8 +30,12 @@ image::Kubernetes-Service-Basic.svg[width=1980, height=700]
 
 [.column]
 --
-* permanent IP address
-* lifecycle of Pod and Service are not connected
+* Permanent IP address
+* Lifecycle of Pod and Service are not connected
+//-
+
+[%step]
+* **How to access apps through browser??**
 --
 
 [.columns]
@@ -41,18 +46,102 @@ image::Kubernetes-Service-Basic.svg[width=1980, height=700]
 image::Kubernetes-External-Ingress.svg[width=1980, height=700]
 --
 
+[.columns]
+[transition-speed=fast]
+=== External Configuration
+
 [.column]
 --
-* permanent IP address
-* lifecycle of Pod and Service are not connected
+image::Kubernetes-ConfigMap.svg[width=1920, height=700]
 --
 
-=== ConfigMap
+[.column]
+--
+[%step]
+* ConfigMap
+** External configuration of your application
+** Can be shared
+** *Dont* put credentials into *ConfigMap*
+--
 
+[.columns]
+[transition-speed=fast]
+[%notitle]
+=== Secret
+
+[.column]
+--
+image::Kubernetes-Secret.svg[width=1920, height=700]
+--
+
+[.column]
+--
+* ConfigMap
+** External configuration of your application
+** Can be shared
+** *Dont* put credentials into *ConfigMap*
+* Secret
+** Used to store secret data
+*** Credentials
+*** Keys or Certificates
+** Base64 encoded
+** The built-in security mechanism is not enabled by default!
+--
+
+[.columns]
 === Volumes
+
+[.column]
+--
+image::Kubernetes-Volumes.svg[width=1920, height=700]
+--
+
+[.column]
+--
+* Storage on local machine
+* Or remote, outside of the K8s cluster
+* K8s doesnt manage data persistance!!
+--
+
 
 === Deployment and Sateful Set
 
-=== Sum up most important components in K8s
+[.columns]
+[%notitle]
+=== Deployments
 
+[.column]
+--
+image::Kubernetes-Service-Replica.svg[width=1920, height=700]
+--
 
+[.column]
+--
+* Replicas are connected to the same service
+* Service has 2 functionalities
+** Permanent IP
+** Load balancer
+--
+
+[.columns]
+[%notitle]
+=== Deployment
+
+[.column]
+--
+image::Kubernetes-Deployment.svg[width=1920, height=700]
+--
+
+[.column]
+--
+* Deployment
+** Blueprint for my-app pods
+** You create Deployments
+** Abstraction of Pods
+* Stateful Set
+** In practice really complicated
+** For example we use deployment for db
+** DB are often hosted outside of K8s cluster
+
+IMPORTANT: DB cant be replicated via Deployment!!
+--
